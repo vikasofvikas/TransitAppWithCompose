@@ -1,4 +1,4 @@
-package com.plcoding.mapscomposeguide.presentation
+package com.example.transitappwithcompose.presentation
 
 object MapStyle {
 
