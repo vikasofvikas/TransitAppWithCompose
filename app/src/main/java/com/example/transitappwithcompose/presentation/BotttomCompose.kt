@@ -17,13 +17,14 @@ import androidx.compose.ui.unit.sp
 import com.example.transitappwithcompose.R
 
 
-@OptIn(ExperimentalMaterialApi::class)
+@OptIn(ExperimentalMaterialApi::class) //This annotation allows the usage of the experimental material design APIs in the code.
 @Composable
 fun BottomSheetComposeTheme() {
 
     var value by remember {
         mutableStateOf("")
     }
+    // Dummy data
     val station = listOf("East", "Sherbrooke/Saint-Mathieu","Cote-des-Neiges/Sherbrooke","Sherbrooke/Saint-Mathieu", "Cote-des-Neiges/Sherbrooke","East","Sherbrooke/Saint-Mathieu","Cote-des-Neiges/Sherbrooke","Sherbrooke/Saint-Mathieu", "Cote-des-Neiges/Sherbrooke")
     val busNumber = listOf("24","165","24","165","24","165","24","165","24","165")
     val minute = listOf("4","15","4","15","4","15","4","15","4","15")
@@ -32,7 +33,8 @@ fun BottomSheetComposeTheme() {
         sheetContent = {
             Spacer(modifier = Modifier.height(46.dp))
             Box(modifier = Modifier
-                .background(Color.Transparent)) {
+                .background(Color.Transparent)
+            ) {
                 LazyColumn{
                     itemsIndexed(
                         station
@@ -66,13 +68,15 @@ fun BottomSheetComposeTheme() {
                                     fontWeight = FontWeight.SemiBold,
                                     textAlign = TextAlign.Left,
                                     modifier = Modifier
-                                        .background(Color(24, 75, 166))
+                                              .background(Color(24, 75, 166))
                                 )
                             }
 
                             Column(
+
                                 modifier = Modifier
-                                    .padding(end = 15.dp, top = 10.dp, bottom = 15.dp)
+                                          .padding(end = 15.dp, top = 10.dp, bottom = 15.dp)
+
                             ) {
 
                             Text(
@@ -113,7 +117,7 @@ fun BottomSheetComposeTheme() {
                         fontSize = 18.sp,
                         color = Color(185, 249, 214),
                         textAlign = TextAlign.Start
-                    )
+                           )
                                    },
 
                     leadingIcon = {
@@ -134,24 +138,17 @@ fun BottomSheetComposeTheme() {
 
                     modifier = Modifier
                         .width(250.dp)
-
                         .offset(y = (-45).dp)
                         .wrapContentWidth()
                         .clip(RoundedCornerShape(10.dp))
                         .background(Color(48, 181, 102))
                         .align(Alignment.TopCenter)
                 )
-
             }
-
-
-
         },
         sheetBackgroundColor = Color.Transparent,
         sheetPeekHeight = 350.dp,
         sheetElevation = 0.dp
-      //  sheetGesturesEnabled = true,
-
 
     ) {
       MapScreen()
