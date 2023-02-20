@@ -14,6 +14,8 @@ The public transport agency that you want the data from is likely using [protobu
 
 ## Screenshots
 
+![App Screenshot](https://i.ibb.co/ZG8gxDY/Untitled-Adobe-Express.gif)
+
 ![App Screenshot](https://i.ibb.co/jv1Sz9N/Screenshot-20230219-193135.png)
 
 
