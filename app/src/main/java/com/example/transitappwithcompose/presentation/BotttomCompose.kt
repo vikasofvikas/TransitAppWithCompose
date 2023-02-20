@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import com.example.transitappwithcompose.R
 
 
-@OptIn(ExperimentalMaterialApi::class) //This annotation allows the usage of the experimental material design APIs in the code.
+@OptIn(ExperimentalMaterialApi::class) //This annotation allow the usage of the experimental material design APIs in the code.
 @Composable
 fun BottomSheetComposeTheme() {
 
